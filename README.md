@@ -1,4 +1,4 @@
-\# AI Engineering Coursework
+# AI Engineering Coursework
 
 
 
@@ -6,17 +6,17 @@ This repository contains my submission for CSC495's assignment.
 
 
 
-\## Contents
+## Contents
 
 
 
-* `api\_test.py` - Python script that tests the DeepSeek AI API.
+* `api_test.py` - Python script that tests the DeepSeek AI API.
 * `screenshots/huggingFaceOutput.png` - Shows the output of running the python script.
 * `screenshots/ollamaOutput.png` - Shows the output after asking what is the capital of France.
 
 
 
-\## How to Run
+## How to Run
 
 
 
@@ -24,7 +24,7 @@ Install the required Python package:
 
 
 
-pip install huggingface\_hub
+pip install huggingface_hub
 
 
 
@@ -32,7 +32,7 @@ Set the required API key as an environment variable, then run:
 
 
 
-python api\_test.py
+python api_test.py
 
 
 
