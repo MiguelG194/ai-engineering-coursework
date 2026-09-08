@@ -32,9 +32,9 @@ Where to find each field, if you get stuck:
 
 | Model | Link | Parameter count / size | Architecture family | License | Tokenizer / vocab size |
 |---|---|---|---|---|---|
-| Model 1:  https://huggingface.co/openai-community/gpt2 | 124M | GPT2LMHeadModel | MIT | 50,257 | 1,024 tokens |
-| Model 2: https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct | 1.54B | Qwen2ForCausalLM | Apache-2.0 | 151,936 | 32,768 tokens |
-| Model 3: https://huggingface.co/XHToken/Spark-X2.5-4B | 4B | Spark2_5ForCausalLM | Apache-2.0 | 131,072 | 1,048,576 tokens |
+| Model 1: | https://huggingface.co/openai-community/gpt2 | 124M | GPT2LMHeadModel | MIT | 50,257 | 1,024 tokens |
+| Model 2: | https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct | 1.54B | Qwen2ForCausalLM | Apache-2.0 | 151,936 | 32,768 tokens |
+| Model 3: | https://huggingface.co/XHToken/Spark-X2.5-4B | 4B | Spark2_5ForCausalLM | Apache-2.0 | 131,072 | 1,048,576 tokens |
 
 ## Part 3: Tokenizer Comparison Exercise
 
