@@ -61,16 +61,16 @@ Record each model's output (please take screenshots of the output and use those 
 
 | ID | Model A output (verbatim) | Model B output (verbatim) |
 |---|---|---|
-| 01 | {"category": "billing", "urgency": "high", "needs_human": true} | {"category": "billing", "urgency": "high", "needs_human": true} |
-| 02 | {"category": "account_access", "urgency": "low", "needs_human": false} | {"category": "account_access", "urgency": "low", "needs_human": false} |
-| 03 | {"category": "technical", "urgency": "medium", "needs_human": true} | {"category": "technical", "urgency": "high", "needs_human": true} |
-| 04 | {"category": "billing", "urgency": "high", "needs_human": true} | {"category": "billing", "urgency": "high", "needs_human": true} |
-| 05 | {"category": "feature_request", "urgency": "low", "needs_human": false} | {"category": "feature_request", "urgency": "low", "needs_human": false} |
-| 06 | {"category": "billing", "urgency": "high", "needs_human": true} | {"category": "billing", "urgency": "high", "needs_human": true} |
+| 01 | ![Model1 Results](images/Model1Ticket1.png) | ![Model2 Results](images/Model2Ticket1.png) |
+| 02 | ![Model1 Results](images/Model1Ticket2.png) | ![Model2 Resuslts](images/Model2Ticket2.png) |
+| 03 | ![Model1 Results](images/Model1Ticket3.png) | ![Model2 Results](images/Model2Ticket3.png) |
+| 04 | ![Model1 Results](images/Model1Ticket4.png) | ![Model2 Results](images/Model2Ticket4.png) |
+| 05 | ![Model1 Results](images/Model1Ticket5.png) | ![Model2 Results](images/Model2Ticket5.png) |
+| 06 | ![Model1 Results](images/Model1Ticket6.png) | ![Model2 Results](images/Model2Ticket6.png) |
 
 Note which model felt slower to respond.
 
-Both took about the same amount of time, but certain tickets took longer. For example, ticket 6 took model 2 40 seconds longer than model 1. It could've been because it was thinking longer for a better response. However, both produced the same output despite the difference in time.
+Both took about the same amount of time, but certain tickets took longer. Model 2 was slightly faster, taking 155 seconds total compared to the 166 seconds it took model 1.
 
 ---
 
@@ -135,9 +135,9 @@ Address each of these:
 - You just scored twelve outputs by hand. Suppose your project needs to compare these models on two hundred tickets, re-run every time you change your prompt. What goes wrong if you keep doing it by hand? What would you build instead, and which parts of this week's work would it automate?
 - Give one reason six tickets isn't enough to trust this decision.
 
-Based on the results, I would go with Qwen3.5-27B. It is smaller, yet it still produced results similar to the much larger Qwen3.5-397B-A17B. In the functional correctness section, both models produced valid JSON for every ticket, earning full scores. However, both models incorrectly classified the urgency of some tickets in the second test. Qwen3.5-27B performed slightly better in classifying the tickets and was also faster at generating its results. Based on these results, Qwen3.5-27B demonstrated better efficiency in the experiment.
+Based on the results, I would go with Qwen3.5-27B. It is smaller, yet it still produced results similar to the much larger Qwen3.5-397B-A17B. In the functional correctness section, both models produced valid JSON for every ticket, earning full scores. However, both models incorrectly classified the urgency of some tickets in the second test. Qwen3.5-27B performed slightly better in classifying the tickets, while Qwen3.5-397B-A17B was slightly faster at generating its results. Based on these results, Qwen3.5-27B demonstrated comparable performance with a smaller model size, although the larger model had a slight advantage in generation speed.
 
-Even though I chose Qwen3.5-27B, Qwen3.5-397B-A17B has a much larger parameter size. It is possible that the sample size was too small to demonstrate the larger model’s advantages. By choosing the smaller model, I may be sacrificing some of the larger model’s potential capabilities, particularly when dealing with more difficult tickets.
+Even though I chose Qwen3.5-27B, Qwen3.5-397B-A17B has a much larger parameter size. It is possible that the sample size was too small to demonstrate the larger model's advantages. By choosing the smaller model, I may be sacrificing some of the larger model's potential capabilities, particularly when dealing with more difficult tickets. The larger model's slightly faster generation time also suggests that model size alone does not determine inference speed.
 
 One problem I might encounter when testing hundreds of tickets is accidentally mistyping a prompt or reusing a ticket. It would also be time-consuming to manually review each model’s output and compare it against the reference answer. Instead, I could use the Hugging Face API to automate sending prompts to each model. I could keep the main prompt consistent while changing the ticket being evaluated. I could also automate the evaluation process by using another LLM as a judge to compare the outputs against the reference answers. However, this would introduce additional challenges, such as potential bias and inaccuracies in the judge model. Automating these tasks would make the evaluation process more consistent, efficient, and reproducible.
 
