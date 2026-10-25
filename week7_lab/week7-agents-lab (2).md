@@ -1,6 +1,11 @@
 **Name:** Miguel Gomez
-**Link to your Hugging Face Space:** _____
-**Link to (or screenshot of) your Unit 1 certificate:** 
+**Link to your Hugging Face Space:**
+
+used a local model: https://github.com/MiguelG194/ai-engineering-coursework/tree/main/week7_lab
+
+**Link to (or screenshot of) your Unit 1 certificate:**
+
+
 
 ---
 
